@@ -1,0 +1,12 @@
+一：electron简介
+	Electron最初是叫Atom Shell,是GitHub开发的一个开源框架。它允许使用Node.js（作为后端）和Chromium（作为前端）完成桌面GUI应用程序的开发。
+	Electron现已被多个开源Web应用程序用于前端与后端的开发，其中著名项目包括GitHub的Atom和微软的Visual Studio Code。
+	框架由Electron可执行文件（Windows中为electron.exe、macOS中为electron.app、Linux中为electron）提供。
+	开发者可以自行添加标志、自定义图标、重命名或编辑Electron可执行文件。
+二：开始你的第一个electron
+	一个基础的Electron包含三个文件：
+		package.json（元数据）,
+		main.js（代码）
+		index.html（图形用户界面）
+		
+		
