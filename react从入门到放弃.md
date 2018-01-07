@@ -50,3 +50,52 @@ React 是一个视图层的框架，所谓视图层就是我们在网页上能�
 在此想跟大家分享一点小经验，这也关系到你最终能不能将 React 用得很溜。就是：在前端开发过程中，要善于观察和抽象。尤其是在项目前期，不要着急写代码，一定观察项目的原型图或者设计稿，想想哪些部分是可以拆分成可以复用的公共组件的。这样做能让你后面的工作，事半功倍。
 
 在后面的文章中你将更深入地体会到这一点，同时你也会体会到 React 的组件化开发，到底是多么多么的爽！！
+
+
+React 第一印象
+废话不多说，先看一段代码：
+
+class HelloMessage extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
+
+ReactDOM.render(<HelloMessage name="John" />, mountNode);
+这是从 React 官网首页粘贴过来的一段示例代码，简单解释一下，这段代码实现了一个名为 HelloMessage 的组件，它接收一个 name 属性，可以在页面上展示出 Hello xxx。ReactDOM.render 是用来将某个组件渲染到页面的某个 DOM 节点上。
+
+在之后的文章中，我们会详细讲解如何创建 React 组件以及如何开发一个完整的 React 项目。现在，我更想跟大家探讨的是，你看了上述这段代码，算是对 React 有了第一印象，内心是怎样的感受？
+
+我相信，很多人第一次看到这样的代码时的感受都是：“我擦，这是什么玩意儿，HTML怎么都写到JavaScript代码里去了，展示与业务逻辑分离，这都不懂？”，说实话，这就是我当时真实的内心感受。很幸运我坚持了下去，并一直用到现在，现在我对 React 的感受是：“我擦，好爽，好牛逼”。
+
+刚开始有这种想法很好理解，好多人像我一样被“展示要与业务逻辑分离”这句话洗脑太久了，其实，这句话真正发挥价值的时候，是在 MVC 开发模式出现之前，那时候 web 程序逻辑很简单，可能页面开始处是连接数据库，查询数据，接在下面就是 HTML 代码来展示查询结果了。如果你了解一点 PHP，在 PHP 文件的开始处有个 <?php 结尾处可能有个 ?>，这就是那个年代用来分隔 PHP 代码和 HTML 代码的。但是随着 web 程序逻辑越来越复杂，业务逻辑代码跟 HTML 代码混到一起就变得越来越难以维护，所以就有了 MVC 开发模式。
+
+并不是说现在“展示要与业务逻辑分离”这句话已经不适用于现在的 web开发，我想说的是，我们看问题，要回归问题的本质，我们要不要接受 React 的这种写法，判断依据应该是基于 React 的这种写法有没有让我们的前端代码变得更清晰、易维护性更强，而不是 JavaScript 中是不是写了类似于 HTML 语法的东西，千万不要为了分离而分离。
+
+其实只是给JavaScript加了点糖 - JSX
+上面这种在 JavaScript 中写类似 HMTL 代码的语法被称为 JSX。你可以理解为扩展版的 JavaScript。显然，这种语法在浏览器环境中是不能执行的，所以在代码加载到页面中之前，我们需要通过工具将它转译成标准的 JavaScript 语法，就像我们现在为什么可以用 ES6 的语法一样，尽管目前浏览器对它支持得还不好。例如下面这两段代码，实际上是等价的。
+
+JSX 语法：
+
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
+由上面代码转译而来的标准 JavaScript 语法：
+
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
+是不是感觉 JSX 语法更直观，写起来更简洁？所以说 JSX 实际上是 React.createElement(component, props, ...children) 的语法糖。
+
+如果你熟悉 HTML，那么 JSX 对于你来说是没有任何压力的，因为 HTML 中的所有标签，在 JSX 中都是支持的，基本上没有学习成本，只有如下几点略微的不同：
+
+class 属性变为 className
+tabindex 属性变为 tabIndex
+for 属性变为 htmlFor
+textarea 的值通过需要通过 value 属性来指定
+style 属性的值接收一个对象，css 的属性变为驼峰写法，如：backgroundColor。
+在上一篇中，我们有提到组件，实际上，我们可以把在 JSX 中写的 HTML 标签看作是 React 内部已经实现了的基础组件。在下一篇中我将详细为大家介绍如何利用这些基础组件来创造一个新的组件，也就是上一篇提到的 React 所提供的创建一个新的 HTML 标签的能力。
