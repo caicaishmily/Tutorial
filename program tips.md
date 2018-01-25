@@ -1,7 +1,11 @@
 1 在js中使用单引号'',不要使用双引号""
+
 2 类名不要使用驼峰式命名,而是使用下划线 _ 或是 -
+
 3 netstat -ano|findstr "4000" 查看某个端口的pid
+
 4 React中,组件的私有方法都用 _ 开头，所有事件监听的方法都用 handle 开头。把事件监听方法传给组件的时候，属性名用 on 开头。
+
 5 react 中  组件的编写顺序
     1 static 开头的类属性，如 defaultProps、propTypes
     2 构造函数，constructor
