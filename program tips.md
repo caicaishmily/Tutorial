@@ -12,6 +12,7 @@
     7 render*开头的方法，有时候 render() 方法里面的内容会分开到不同函数里面进行，这些函数都以 render* 开头
     8 render() 方法
 6 redux步骤
+
     // 定一个 reducer
     function reducer (state, action) {
       /* 初始化 state 和 switch case */
@@ -28,3 +29,9 @@
 
     // 后面可以随意 dispatch 了，页面自动更新
     store.dispatch(...)
+    
+7 个人写 reducer 文件的习惯，仅供参考：
+
+    定义 action types
+    编写 reducer
+    跟这个 reducer 相关的 action creators
