@@ -6,7 +6,7 @@ LESS 简介:
   例如:
     @nice-blue: #ccc;
     @light-blue: @nice-blue + #111;
-
+    
     #header { color: @nice-blue; }
     输出为:
     #header { color: #ccc; } 
@@ -70,7 +70,7 @@ LESS 简介:
   引导
     当我们想根据表达式进行匹配，而非根据值和参数匹配时，导引就显得非常有用。
     为了尽可能地保留CSS的可声明性，LESS通过导引混合而非if/else语句来实现条件判断，因为前者已在@media query特性中被定义。
-
+    
     以此例做为开始：
       .mixin (@a) when (lightness(@a) >= 50%) {
         background-color: black;

@@ -4,35 +4,35 @@
 	EJS结合数据和模板来生成HTML。 比如现在我们要生成有一个标题和一个用品清单的页面。
 	1 传统方式：
 		<h1>水果</h1>
-			<ul>
-				<li>香蕉</li>
-				<li>苹果</li>
-				<li>西瓜</li>
-			</ul>
+	    <ul>
+	      <li>香蕉</li>
+	      <li>苹果</li>
+	      <li>西瓜</li>
+	    </ul>
 	2 使用ejs模板：
 		假设服务器给你传过来的数据如下：
-		data：{	title:	'水果'
-			supplies:	['香蕉', '苹果', '西瓜']
-		}
+	      data：{	title:	'水果'
+	          supplies:	['香蕉', '苹果', '西瓜']
+	      }
 		
 		2.1 JavaScript拼字符串方式：
 		
-			var html = "<h1>"+data.title+"</h1>";
-			html += "<ul>"
-			for(var i=0; i<data.supplies.length; i++) {
-			    html += "<li><a href='supplies/"+data.supplies[i]+"'>";
-			    html += data.supplies[i]+"</a></li>";
-			}
-			html += "</ul>";
+	      var html = "<h1>"+data.title+"</h1>";
+	      html += "<ul>"
+	      for(var i=0; i<data.supplies.length; i++) {
+	      	html += "<li><a href='supplies/"+data.supplies[i]+"'>";
+	      	html += data.supplies[i]+"</a></li>";
+	      }
+	      html += "</ul>";
 		
 		2.2 ejs template:
 		
-			<h1><%= title %></h1>
-			<ul>
-				<% for(var i=0; i<supplies.length; i++) {%>
-					<li><a><%= supplies[i] %></a></li>
-				<% } %>
-			</ul>
+	      <h1><%= title %></h1>
+	      <ul>
+	        <% for(var i=0; i<supplies.length; i++) {%>
+	        	<li><a><%= supplies[i] %></a></li>
+	        <% } %>
+	      </ul>
 		正如上面所说的,ejs结合数据和模板来生成HTML。相较之下，ejs更加友好，明确且维护性良好
 		2.3 ejs的优点
 			没有混乱的HTML字符串连接。
@@ -81,7 +81,7 @@
 		html = new EJS({url: '/template.ejs'}).render(data)
 	用来自JSON请求的数据呈现的模板的结果更新元素'todo'
 		new EJS({url:'/todo.ejs'}).update('todo','/todo.json')
-
+	
 	基于我们之前写的模版生成一个EJS对象
 		new EJS({url: 'path'})
 		对象有下面两个成员函数
