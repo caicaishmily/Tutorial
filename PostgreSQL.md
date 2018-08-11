@@ -48,3 +48,13 @@ PostgreSQL由计算机科学教授Michael Stonebraker在UCB创建。 它最初�
 3. pgFouine：
 它是一个日志分析器，可以从PostgreSQL日志文件创建报告。 专有工具有 -
 Lightning Admin for PostgreSQL, Borland Kylix, DBOne, DBTools Manager PgManager, Rekall, Data Architect, SyBase Power Designer, Microsoft Access, eRWin, DeZign for Databases, PGExplorer, Case Studio 2, pgEdit, RazorSQL, MicroOLAP Database Designer, Aqua Data Studio, Tuples, EMS Database Management Tools for PostgreSQL, Navicat, SQL Maestro Group products for PostgreSQL, Datanamic DataDiff for PostgreSQL, Datanamic SchemaDiff for PostgreSQL, DB MultiRun PostgreSQL Edition, SQLPro, SQL Image Viewer, SQL Data Sets 等等。
+
+## PostgreSQL数据类型
+数据类型指定要在表字段中存储哪种类型的数据。 在创建表时，对于每列必须使用数据类型。
+PotgreSQL中主要有三种类型的数据类型。 此外，用户还可以使用CREATE TYPE SQL命令创建自己的自定义数据类型。
+
+以下是PostgreSQL中主要有三种类型的数据类型：
+
+- 数值数据类型
+- 字符串数据类型
+- 日期/时间数据类型
