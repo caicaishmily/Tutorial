@@ -30,3 +30,21 @@ PostgreSQL由计算机科学教授Michael Stonebraker在UCB创建。 它最初�
 - 1995年发布为Postgres95。
 - 1996年重新发布为PostgreSQL 6.0。
 - 建立PostgreSQL全球开发团队。
+
+## PostgreSQL特点
+- PostgreSQL可在所有主要操作系统(即Linux，UNIX(AIX，BSD，HP-UX，SGI IRIX，Mac OS X，Solaris，Tru64)和Windows等)上运行。
+- PostgreSQL支持文本，图像，声音和视频，并包括用于C/C++，Java，Perl，Python，Ruby，Tcl和开放数据库连接(ODBC)的编程接口。
+- PostgreSQL支持SQL的许多功能，例如复杂SQL查询，SQL子选择，外键，触发器，视图，事务，多进程并发控制(MVCC)，流式复制(9.0)，热备(9.0))。
+- 在PostgreSQL中，表可以设置为从“父”表继承其特征。
+- 可以安装多个扩展以向PostgreSQL添加附加功能。
+
+### PostgreSQL工具
+1. psql：
+它是一个命令行工具，也是管理PostgreSQL的主要工具。 pgAdmin是PostgreSQL的免费开源图形用户界面管理工具。
+
+2. phpPgAdmin:
+它是用PHP编写的PostgreSQL的基于Web的管理工具。 它基于phpMyAdmin工具管理MySQL功能来开发。它可以用作PostgreSQL的前端工具。
+
+3. pgFouine：
+它是一个日志分析器，可以从PostgreSQL日志文件创建报告。 专有工具有 -
+Lightning Admin for PostgreSQL, Borland Kylix, DBOne, DBTools Manager PgManager, Rekall, Data Architect, SyBase Power Designer, Microsoft Access, eRWin, DeZign for Databases, PGExplorer, Case Studio 2, pgEdit, RazorSQL, MicroOLAP Database Designer, Aqua Data Studio, Tuples, EMS Database Management Tools for PostgreSQL, Navicat, SQL Maestro Group products for PostgreSQL, Datanamic DataDiff for PostgreSQL, Datanamic SchemaDiff for PostgreSQL, DB MultiRun PostgreSQL Edition, SQLPro, SQL Image Viewer, SQL Data Sets 等等。
