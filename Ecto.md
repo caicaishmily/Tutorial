@@ -11,4 +11,11 @@
   - Phoenix
   - PostgreSQL
 
+### Ecto主要划分为四个部分：
+
+  * Ecto.Repo  
+  * Ecto.Schema
+  * Ecto.Changeset
+  * Ecto.Query
+
 ### 创建phoenix项目
