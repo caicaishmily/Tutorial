@@ -41,3 +41,7 @@
   You can also run your app inside IEx (Interactive Elixir) as:
 
    ```iex -S mix phx.server```
+   
+### 参考链接
+  [Ecto文档](https://hexdocs.pm/ecto/Ecto.html)  
+  [Ecto仓库](https://github.com/elixir-ecto/ecto)  
