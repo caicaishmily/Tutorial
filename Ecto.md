@@ -23,3 +23,21 @@
     用Elixir语法编写的查询用于从给定的存储库中检索信息。 Ecto中的查询是安全的，避免了SQL注入等常见问题，同时仍然是可组合的，允许开发人员逐个构建查询而不是一次性构建查询
     
 ### 创建phoenix项目
+
+  ```mix phx.new my_app ```
+  
+  We are all set! Go into your application by running:
+
+   ``` cd my_app```
+
+  Then configure your database in config/dev.exs and run:
+
+   ```mix ecto.create```
+
+  Start your Phoenix app with:
+
+   ```mix phx.server```
+
+  You can also run your app inside IEx (Interactive Elixir) as:
+
+   ```iex -S mix phx.server```
