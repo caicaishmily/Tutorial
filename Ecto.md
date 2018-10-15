@@ -13,9 +13,13 @@
 
 ### Ecto主要划分为四个部分：
 
-  * Ecto.Repo  
-  * Ecto.Schema
-  * Ecto.Changeset
-  * Ecto.Query
-
+  * Ecto.Repo   
+    Repo是数据存储的包装器。 通过Repo，我们可以创建，更新，销毁和查询现有条目。 Repo需要适配器和认证才能与数据库通信
+  * Ecto.Schema  
+    模式用于将任何数据源映射到Elixir结构中。 我们经常使用它们将表映射到Elixir数据，但这是它们的一个用例，而不是使用Ecto的要求
+  * Ecto.Changeset  
+    变更集为开发人员提供了一种过滤和转换外部参数的方法，以及在将更改应用于数据之前跟踪和验证更改的机制
+  * Ecto.Query  
+    用Elixir语法编写的查询用于从给定的存储库中检索信息。 Ecto中的查询是安全的，避免了SQL注入等常见问题，同时仍然是可组合的，允许开发人员逐个构建查询而不是一次性构建查询
+    
 ### 创建phoenix项目
